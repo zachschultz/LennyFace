@@ -15,7 +15,6 @@ $(document).ready(function() {
 	// Store path of backgrounds folder
 	var path = 'img/backgrounds/'; 
 
-	// Set background image in css
-	$('body').css('background-image', 'url('+path+bg+')');
-	
+	// Set background image
+	$('img.bg').attr('src', path+bg);
 });
