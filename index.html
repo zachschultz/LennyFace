@@ -56,16 +56,16 @@
 		
 		<div class="row spacer" data-bind="foreach: faceListRow1">
 			<div class="col-md-3 col-xs-3 text-center">
-				<div class="boxedItem">
-					<a data-bind="attr: { href: text}, click: $parent.copyFunction, text: text" href="#" class="boxedItem"></a>
+				<div data-bind="click: $parent.copyFunction" class="boxedItem">
+					<a data-bind="attr: { href: text}, text: text" href="#" class="boxedItem"></a>
 				</div>
 			</div>
 		</div>
 
 		<div class="row spacer" data-bind="foreach: faceListRow2">
 			<div class="col-md-3 col-xs-3 text-center">
-				<div class="boxedItem">
-					<a data-bind="attr: { href: text}, click: $parent.copyFunction, text: text" href="#" class="boxedItem"></a>
+				<div data-bind="click: $parent.copyFunction" class="boxedItem">
+					<a data-bind="attr: { href: text}, text: text" href="#" class="boxedItem"></a>
 				</div>
 			</div>
 		</div>

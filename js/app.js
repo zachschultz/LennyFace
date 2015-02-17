@@ -70,11 +70,12 @@ var ViewModel = function() {
 		if (onMobileBrowser) {
 			return;
 		}
-		var target = event.target;
-		$(target).zclip({
+		var face = $(event.currentTarget);
+		$(face[0]).zclip({
 			path: "zclip/ZeroClipboard.swf",
 			copy: function() {
-				return $(target).text();	
+				var output = $(face[0]).children()[0];
+				return $(output).text();	
 			}
 		});
 	}
@@ -126,6 +127,10 @@ function isEditable(el) {
 	return editable = el.getAttribute("contentEditable");
 }
 
+/* Disable anchor tags, helps with mobile too */
+$('a').on('click', function(e) {
+	e.preventDefault();
+});
 
 if (onMobileBrowser) {
 
